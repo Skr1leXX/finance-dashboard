@@ -2,6 +2,8 @@
 
 Интерактивная аналитическая панель личных финансов с фильтрами, графиками и AI-инсайтами по тратам.
 
+### 🚀 [Открыть живое демо →](https://finance-dashboard-tau-bay.vercel.app)
+
 ## О проекте
 
 Проект выполнен в рамках 2-дневного интенсива "Vibe Coding: От идеи до работающего сервиса". Позволяет вести учёт доходов/расходов, фильтровать транзакции по периоду/категории/типу, визуализировать траты на графиках и получать AI-анализ паттернов трат.
@@ -18,9 +20,9 @@
 
 ## Стек технологий
 
-**Frontend:** React, TypeScript, Vite, Recharts
+**Frontend:** React, TypeScript, Vite, Recharts — развёрнут на Vercel
 **Backend:** Vercel Serverless Function (Node.js)
-**AI:** Groq API (Llama 3.3 70B)
+**AI:** Groq API (`openai/gpt-oss-20b`)
 
 ## Безопасность
 
@@ -42,11 +44,11 @@ npm install
 npm run dev
 ```
 
-Приложение на `http://localhost:5173`. Для локальной проверки serverless-функции `/api/insights` используй `vercel dev` вместо `npm run dev` (требует Vercel CLI: `npm i -g vercel`).
+Дашборд и графики на `http://localhost:5173`. AI-инсайты локально работают только через `vercel dev` (требует Vercel CLI: `npm i -g vercel`) — обычный `npm run dev` не поднимает serverless-функцию.
 
 ## Деплой
 
-Проект готов к однокликовому деплою на Vercel: импортируй репозиторий, добавь переменную окружения `GROQ_API_KEY` — Vercel сам подхватит `api/insights.js` как serverless-функцию.
+Готов к однокликовому деплою на Vercel: импортируй репозиторий, добавь переменную окружения `GROQ_API_KEY` — Vercel сам подхватит `api/insights.js` как serverless-функцию.
 
 ## Автор
 
